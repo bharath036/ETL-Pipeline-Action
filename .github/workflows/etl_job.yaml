@@ -2,9 +2,12 @@ name: ETL Pipeline
 
 #actions to trigger
 on:
-  push:
-    branches:
-    - main
+  schedule:
+  - cron: '0 0 * * *'
+  workflow_dispatch: 
+  #this command is used to add button and run the action manually.
+  #only when we click on that button
+  
 
 jobs:
   #name of job
